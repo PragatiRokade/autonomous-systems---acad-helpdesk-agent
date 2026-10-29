@@ -1,0 +1,10 @@
+google-adk
+litellm
+ollama
+chromadb
+rank_bm25
+pymupdf
+beautifulsoup4
+requests
+pandas
+loguru
