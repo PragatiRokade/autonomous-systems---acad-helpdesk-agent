@@ -1,0 +1,31 @@
+course_code,course_name,slot,instructor,room,level,department,type,semester
+CSL7570,Autonomous Systems,C,Dr. Kavya Nair,LH-301,500,AI,Core,Odd-2026
+CSL7510,Artificial Intelligence I,A,Dr. Sameer Joshi,LH-101,500,AI,Core,Odd-2026
+CSL7520,Machine Learning I,B,Dr. Kavya Nair,LH-102,500,AI,Core,Odd-2026
+CSL7530,"Maths Fractals: Linear Algebra, Probability, Optimization",D,Dr. Tarun Agarwal,LH-201,500,CSE,Core,Odd-2026
+CSL7540,Algorithms for Big Data,E,Dr. Rohan Iyer,LH-202,500,CSE,Elective,Odd-2026
+CSL7550,Natural Language Processing and Text Mining,F,Dr. Sameer Joshi,LH-203,500,AI,Elective,Odd-2026
+CSL7560,Computer Vision,G,Dr. Kavya Nair,LH-204,500,AI,Elective,Odd-2026
+CSL4010,Machine Learning,A,Dr. Nisha Verma,LH-102,400,CSE,Core,Odd-2026
+CSL4020,Computer Networks,B,Dr. Aarav Mehta,LH-103,400,CSE,Core,Odd-2026
+CSL4030,Operating Systems,C,Dr. Rohan Iyer,LH-104,400,CSE,Core,Odd-2026
+CSL4040,Introduction to Quantum Computing,D,Dr. Nisha Verma,LH-105,400,CSE,Elective,Odd-2026
+CSL4050,Information Security,E,Dr. Aarav Mehta,LH-106,400,CSE,Elective,Odd-2026
+CSL3010,Data Structures and Algorithms,F,Dr. Rohan Iyer,LH-107,300,CSE,Core,Odd-2026
+EEL4010,Digital Signal Processing,A,Dr. Pooja Sharma,LH-108,400,EE,Core,Odd-2026
+EEL4020,Power Electronics,B,Dr. Vikram Rathore,LH-109,400,EE,Elective,Odd-2026
+EEL4030,Embedded Systems,D,Dr. Pooja Sharma,LH-110,400,EE,Elective,Odd-2026
+MEL4010,Heat Transfer,C,Dr. Anita Choudhary,LH-111,400,ME,Core,Odd-2026
+MEL4020,Robotics,E,Dr. Rahul Bansal,LH-112,400,ME,Elective,Odd-2026
+HSL4020,Introduction to Philosophy,E,Dr. Meera Kulkarni,LH-205,400,Humanities,Elective,Odd-2026
+HSL4030,Economics of Development,F,Dr. Arjun Deshpande,LH-206,400,Humanities,Elective,Odd-2026
+HSL4050,Digital Humanities,G,Dr. Sneha Pillai,LH-207,400,Humanities,Elective,Odd-2026
+HSL4040,Research Methods in Social Sciences,A,Dr. Meera Kulkarni,LH-208,400,Humanities,Core,Odd-2026
+HSL5010,Advanced Political Theory,B,Dr. Arjun Deshpande,LH-209,500,Humanities,Elective,Odd-2026
+HSL2010,Introduction to Sociology,D,Dr. Sneha Pillai,LH-210,200,Humanities,Core,Odd-2026
+PHL4010,Quantum Mechanics II,C,Dr. Imran Qureshi,LH-301A,400,Physics,Core,Odd-2026
+CYL4010,Organic Synthesis,F,Dr. Latika Rao,LH-302,400,Chemistry,Core,Odd-2026
+MAL4010,Real Analysis,G,Dr. Tarun Agarwal,LH-303,400,Mathematics,Core,Odd-2026
+BSL4010,Bioinformatics,A,Dr. Divya Menon,LH-304,400,Biotechnology,Elective,Odd-2026
+OEL5010,Open Elective: Technology Entrepreneurship,H,Dr. Anita Choudhary,LH-305,500,ME,Elective,Odd-2026
+OEL5020,Open Elective: Data Science for Everyone,H,Dr. Nisha Verma,LH-306,500,CSE,Elective,Odd-2026
