@@ -116,10 +116,3 @@ It prints, per file: heuristic pass rate, accuracy per category, overall accurac
 refusal rate, false-refusal rate, which agent gave the final answer, and the questions whose behaviour changed
 between runs. Copy these numbers into the report (section 5), and paste the old and new answers for each unstable
 question.
-
-## Known data limitations
-
-- `timetable.csv` and `faculty.csv` are synthetic (dummy `.example` emails).
-- Questions 2 and 13 need `BTech_Regulations_Latest_21July2018.pdf`; without it, refusing is the correct answer.
-- Two-column curriculum tables (questions 8, 17, 18) may be extracted out of order; check them by hand.
-- Several regulation versions (2018, 2019, 2022 PG) coexist and can disagree; check which one an answer cites.
