@@ -111,7 +111,7 @@ def log_unanswered(question: str, reason: str) -> dict:
         reason: Short reason, e.g. 'out of scope' or 'no relevant context'.
     """
     new = not C.UNANSWERED_LOG.exists()
-    with open(C.UNANSWERED_LOG, "a", newline="") as f:
+    with open(C.UNANSWERED_LOG, "a", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         if new:
             w.writerow(["timestamp", "question", "reason"])

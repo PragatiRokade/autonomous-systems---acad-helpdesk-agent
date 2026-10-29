@@ -1,1 +1,1 @@
-from .agents import root_agent  # lets `adk run helpdesk` / `adk web` find the multi-agent root
+from . import agent

@@ -27,7 +27,8 @@ CITE_RULE = (
 policy_agent = Agent(
     name="policy_agent", model=_model(),
     description="Answers questions on academic rules, regulations, attendance, exams, grading, "
-                "degree requirements, credits, curriculum, office orders and registration procedures.",
+                "degree requirements, credits, curriculum structure, academic calendar dates, "
+                "office orders, notifications and registration procedures.",
     instruction="You are the policy and curriculum expert for IIT Jodhpur. Use search_documents "
                 "(rephrase the query if the first search is weak). " + CITE_RULE,
     tools=[search_documents, log_unanswered],
@@ -58,8 +59,8 @@ root_agent = Agent(
     description="IIT Jodhpur Academic Helpdesk orchestrator.",
     instruction=(
         "You route student questions to exactly one specialist and never answer from your own knowledge.\n"
-        "- Rules, regulations, attendance, exams, credits, degree requirements, curriculum, office orders "
-        "-> transfer to policy_agent\n"
+        "- Rules, regulations, attendance, exams, credits, degree requirements, curriculum, "
+        "academic calendar dates, office orders, notifications -> transfer to policy_agent\n"
         "- Course slot, timetable, room, instructor, number of courses floated -> schedule_agent\n"
         "- Write/draft an email to an instructor (leave, sick leave, makeup exam) -> email_agent\n"
         "- ANYTHING else (campus dining, transport, general knowledge, chit-chat) is out of scope: "

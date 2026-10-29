@@ -8,3 +8,4 @@ beautifulsoup4
 requests
 pandas
 loguru
+mcp

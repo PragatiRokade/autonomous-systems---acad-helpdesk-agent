@@ -16,7 +16,7 @@ def _tok(s: str) -> list[str]:
 
 @lru_cache(maxsize=1)
 def _load():
-    chunks = json.loads(C.CHUNKS_JSON.read_text())
+    chunks = json.loads(C.CHUNKS_JSON.read_text(encoding="utf-8"))
     bm25 = BM25Okapi([_tok(c["embed_text"]) for c in chunks])
     col = chromadb.PersistentClient(path=str(C.CHROMA_DIR)).get_collection("helpdesk")
     return chunks, bm25, col

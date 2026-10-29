@@ -43,7 +43,7 @@ async def ask(agent, question: str) -> dict:
 
 async def main(mode: str, runs: int, out: str):
     agent = root_agent if mode == "multi" else single_agent
-    qs = list(csv.DictReader(open(Path(__file__).parent / "questions.csv")))
+    qs = list(csv.DictReader(open(Path(__file__).parent / "questions.csv", encoding="utf-8-sig")))
     rows = []
     for q in qs:
         for r in range(1, runs + 1):
@@ -65,7 +65,7 @@ async def main(mode: str, runs: int, out: str):
                          "auto_ok": auto_ok})
             print(f"Q{q['id']} run{r}: refused={refused} cited={cited} tools={res['tools']}")
 
-    with open(out, "w", newline="") as f:
+    with open(out, "w", newline="", encoding="utf-8-sig") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
         w.writeheader()
         w.writerows(rows)
