@@ -9,3 +9,8 @@ requests
 pandas
 loguru
 mcp
+python-dotenv
+
+fastapi
+uvicorn
+gradio
