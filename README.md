@@ -116,3 +116,34 @@ It prints, per file: heuristic pass rate, accuracy per category, overall accurac
 refusal rate, false-refusal rate, which agent gave the final answer, and the questions whose behaviour changed
 between runs. Copy these numbers into the report (section 5), and paste the old and new answers for each unstable
 question.
+
+
+## Using Gemini as the LLM (optional)
+
+Embeddings/retrieval stay on Ollama (docs are already chunked); only the chat LLM changes.
+
+```bash
+pip install -r requirements.txt
+cp .env.example .env        # set GEMINI_API_KEY (https://aistudio.google.com/apikey)
+LLM_PROVIDER=gemini python -m eval.run_eval --mode multi --runs 3 --out eval/results_multi_gemini.csv
+```
+Set `LLM_PROVIDER=gemini` in `.env` to make it the default; change model with `GEMINI_MODEL` (e.g. `gemini/gemini-2.5-flash`). Leave unset to use Ollama.
+
+
+## Ask your own questions
+
+Gemini is now the default LLM (set `GEMINI_API_KEY` in `.env`; use `LLM_PROVIDER=ollama` for local).
+
+```bash
+python ask.py                 # interactive
+python ask.py "What is the minimum attendance?"
+```
+
+
+## Web app (FastAPI + Gradio)
+
+```bash
+uvicorn backend.main:app --port 8000   # terminal 1
+python frontend/app.py                 # terminal 2 -> http://localhost:7860
+```
+Set `BACKEND_URL` if the backend runs elsewhere.

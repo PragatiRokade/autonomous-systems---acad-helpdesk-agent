@@ -13,7 +13,22 @@ UNANSWERED_LOG = ROOT / "data" / "unanswered_questions.csv"
 OLLAMA_HOST = os.getenv("OLLAMA_API_BASE", "http://localhost:11434")
 os.environ.setdefault("OLLAMA_API_BASE", OLLAMA_HOST)  # used by LiteLLM
 # Swap the LLM here for the "replace the LLM" experiment, e.g. ollama_chat/qwen3:8b
-LLM_MODEL = os.getenv("LLM_MODEL", "ollama_chat/llama3.1:8b")
+# Provider choice: LLM_PROVIDER=gemini (default, needs GEMINI_API_KEY, see .env.example) or ollama
+try:
+    from dotenv import load_dotenv
+    load_dotenv(ROOT / ".env")
+except ImportError:
+    pass
+LLM_PROVIDER = os.getenv("LLM_PROVIDER", "gemini").lower()
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini/gemini-2.0-flash")
+if LLM_PROVIDER == "gemini":
+    _key = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
+    if not _key:
+        raise RuntimeError("LLM_PROVIDER=gemini but GEMINI_API_KEY is not set (see .env.example)")
+    os.environ["GEMINI_API_KEY"] = _key
+    LLM_MODEL = os.getenv("LLM_MODEL", GEMINI_MODEL)
+else:
+    LLM_MODEL = os.getenv("LLM_MODEL", "ollama_chat/llama3.1:8b")
 EMBED_MODEL = os.getenv("EMBED_MODEL", "nomic-embed-text")
 
 # Retrieval
